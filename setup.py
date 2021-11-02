@@ -75,6 +75,7 @@ def main():
         "hummingbot.connector.exchange.ndax",
         "hummingbot.connector.exchange.okex",
         "hummingbot.connector.exchange.probit",
+        "hummingbot.connector.exchange.luno",
         "hummingbot.connector.derivative",
         "hummingbot.connector.derivative.binance_perpetual",
         "hummingbot.connector.derivative.bybit_perpetual",

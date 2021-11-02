@@ -355,6 +355,10 @@ cdef class SimpleTradeStrategy(StrategyBase):
             OrderBook order_book = market_info.order_book
             object price = market_info.get_price_for_volume(True, self._order_amount).result_price
 
+        self.logger().info(f"{market_info.base_asset} balance is {base_asset_balance}")
+        self.logger().info(f"{market_info.quote_asset} balance is {quote_asset_balance}")
+        self.logger().info(f"{quote_asset_balance} >= {self._order_amount} * {price} if {self._is_buy} else {base_asset_balance} >= {self._order_amount}")
+        
         return quote_asset_balance >= self._order_amount * price if self._is_buy else base_asset_balance >= self._order_amount
 
     cdef c_process_market(self, object market_info):

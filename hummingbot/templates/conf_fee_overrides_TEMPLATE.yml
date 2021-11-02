@@ -94,3 +94,6 @@ bybit_perpetual_taker_fee:
 
 bybit_perpetual_testnet_maker_fee:
 bybit_perpetual_testnet_taker_fee:
+
+luno_maker_fee:
+luno_taker_fee:
